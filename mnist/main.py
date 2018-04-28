@@ -112,7 +112,10 @@ def test(epoch):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
+def main():
+     for epoch in range(1, args.epochs + 1):
+     train(epoch)
+     test()
 
-for epoch in range(1, args.epochs + 1):
-    train(epoch)
-    test(epoch)
+if _name_ == '__main__':
+     main()
